@@ -1,0 +1,25 @@
+{
+  "sound": false,
+  "sound_volume": 0.25,
+  "decks_path": "./assets/img/decks",
+  "coords_enemy_deck": [
+    420,
+    125
+  ],
+  "coords_enemy_deck_used": [
+    640,
+    125
+  ],
+  "coords_player_deck": [
+    420,
+    450
+  ],
+  "coords_player_deck_used": [
+    640,
+    450
+  ],
+  "selected_enemy_deck": "red_deck_expansion_1",
+  "selected_player_deck": "blue_deck_expansion_1",
+  "qty_cards_deck_player": 15,
+  "qty_cards_deck_enemy": 15
+}
