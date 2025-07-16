@@ -157,6 +157,11 @@ def handle_play(level_data: dict):
         level_data[loser]['attack'] -= attack
         level_data[loser]['defense'] -= defense
 
+        # for key in ['hp','attack', 'defense']:
+        #     if level_data[loser][key] < 0:
+        #         level_data[loser][key] = 0
+
+
 def calculate_points(winner_card: dict, loser_card: dict) -> int:
     return round((int(winner_card['attack']) - int(loser_card['defense'])) / 100)
 
@@ -167,7 +172,7 @@ def is_deck_empty(player_deck: list) -> bool:
     return len(player_deck) == 0
 
 def has_anyone_lost(level_data: dict) -> bool:
-    return level_data['player']['hp'] < 0 or level_data['enemy']['hp'] < 0
+    return level_data['player']['hp'] <= 0 or level_data['enemy']['hp'] <= 0
 
 def is_game_over(level_data: dict) -> bool:
     return is_deck_empty(level_data['player_deck']) or\
